@@ -51,7 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="73" />
+                                                <entry key="scalingPercent" value="85" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -62,9 +62,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="007bff" />
-                                      <entry key="foregroundImage" value="D:\icon.png" />
+                                      <entry key="backgroundImage" value="D:\background.png" />
+                                      <entry key="foregroundImage" value="D:\title.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -137,7 +136,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202019.3.1/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_send_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202019.3.1/plugins/android/lib/android.jar!/images/material_design_icons/file/ic_cloud_download_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -147,7 +146,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_send_black" />
+                            <entry key="outputName" value="ic_cloud_download" />
                             <entry key="sourceFile" value="C:\Users\ecs" />
                           </map>
                         </option>
