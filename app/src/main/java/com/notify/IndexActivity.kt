@@ -3,23 +3,25 @@ package com.notify
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.view.Gravity
 import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.notify.controller.MassageController
 import org.json.JSONArray
+
 
 class IndexActivity : AppCompatActivity() {
 
   private lateinit var jsonData: JSONArray
   private lateinit var reload: FloatingActionButton
   private lateinit var mainContent: LinearLayout
+  private lateinit var configSound: Button
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class IndexActivity : AppCompatActivity() {
 
     reload = findViewById(R.id.reloadData)
     mainContent = findViewById(R.id.mainContent)
+    configSound = findViewById(R.id.configSound)
     mainContent.removeAllViews()
 
     val data = intent.getSerializableExtra("data").toString()
@@ -45,6 +48,7 @@ class IndexActivity : AppCompatActivity() {
     if (jsonData.length() > 0) {
       for (i in 0 until jsonData.length()) {
         val content = generateModel(
+          jsonData.getJSONObject(i)["updated_at"].toString(),
           jsonData.getJSONObject(i)["description"].toString(),
           jsonData.getJSONObject(i)["full_description"].toString(),
           jsonData.getJSONObject(i)["status"].toString().toInt()
@@ -58,9 +62,30 @@ class IndexActivity : AppCompatActivity() {
       finishAndRemoveTask()
       startActivity(goTo)
     }
+
+    configSound.setOnClickListener {
+      val intent = Intent()
+      when {
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.O -> {
+          intent.action = Settings.ACTION_APP_NOTIFICATION_SETTINGS
+          intent.putExtra(Settings.EXTRA_APP_PACKAGE, this.packageName)
+        }
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
+          intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
+          intent.putExtra("app_package", this.packageName)
+          intent.putExtra("app_uid", this.applicationInfo.uid)
+        }
+        else -> {
+          intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+          intent.addCategory(Intent.CATEGORY_DEFAULT)
+          intent.data = Uri.parse("package:" + this.packageName)
+        }
+      }
+      this.startActivity(intent)
+    }
   }
 
-  private fun generateModel(titleScript: String, descriptionScript: String, status: Int): View {
+  private fun generateModel(dateScript: String, titleScript: String, descriptionScript: String, status: Int): View {
     val structure = LinearLayout(applicationContext)
     val structureStyle = LinearLayout.LayoutParams(
       LinearLayout.LayoutParams.MATCH_PARENT,
@@ -109,7 +134,7 @@ class IndexActivity : AppCompatActivity() {
       LinearLayout.LayoutParams.WRAP_CONTENT,
       1F
     )
-    titleStyle.marginEnd = 20
+    titleStyle.marginEnd = 5
     title.layoutParams = titleStyle
     title.textSize = 18F
     title.gravity = Gravity.END
@@ -117,6 +142,20 @@ class IndexActivity : AppCompatActivity() {
     title.setTextColor(Color.WHITE)
     title.text = titleScript
     head.addView(title)
+
+    val date = TextView(applicationContext)
+    val dateStyle = LinearLayout.LayoutParams(
+      LinearLayout.LayoutParams.WRAP_CONTENT,
+      LinearLayout.LayoutParams.WRAP_CONTENT,
+      1F
+    )
+    dateStyle.marginEnd = 20
+    date.layoutParams = dateStyle
+    date.textSize = 12F
+    date.gravity = Gravity.END
+    date.setTextColor(Color.WHITE)
+    date.text = dateScript
+    head.addView(date)
 
     val body = TextView(applicationContext)
     val bodyStyle = LinearLayout.LayoutParams(
