@@ -10,6 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302b14e1-e4a8-4243-9b3a-4efdcc348829" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/notify/DetailActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/massage_danger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/massage_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/massage_warning.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,13 +24,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/notify/IndexActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/notify/IndexActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_home.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +67,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -168,6 +176,12 @@
       <workItem from="1581396722026" duration="1460000" />
       <workItem from="1581416900599" duration="1683000" />
       <workItem from="1581418654719" duration="1962000" />
+      <workItem from="1581479376041" duration="515000" />
+      <workItem from="1581664357417" duration="601000" />
+      <workItem from="1581665223523" duration="704000" />
+      <workItem from="1581666099914" duration="805000" />
+      <workItem from="1581666950921" duration="5107000" />
+      <workItem from="1581679341803" duration="16000" />
     </task>
     <servers />
   </component>
@@ -178,18 +192,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="471" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1581321305078">
+    <state x="471" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1581668368683">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="471" y="81" key="#com.intellij.ide.util.MemberChooser/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581321305078" />
-    <state x="410" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581320174263">
+    <state x="471" y="81" key="#com.intellij.ide.util.MemberChooser/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581668368683" />
+    <state x="410" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581664661394">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="410" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581320174263" />
-    <state x="260" y="120" key="AndroidCreateResourceFileDialog" timestamp="1581417443217">
+    <state x="410" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581664661394" />
+    <state x="260" y="120" key="AndroidCreateResourceFileDialog" timestamp="1581666743375">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="260" y="120" key="AndroidCreateResourceFileDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581417443217" />
+    <state x="260" y="120" key="AndroidCreateResourceFileDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581666743375" />
     <state x="538" y="178" key="AndroidCreateXmlResourceDialog" timestamp="1581420547860">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -226,10 +240,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="435" y="209" key="cloudConfig.SelfSettingsDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581316479210" />
-    <state x="376" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1581418660587">
+    <state x="376" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1581679341797">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="376" y="189" key="com.intellij.ide.util.TipDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581418660587" />
+    <state x="376" y="189" key="com.intellij.ide.util.TipDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581679341797" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581316511122">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

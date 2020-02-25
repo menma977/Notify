@@ -94,17 +94,24 @@ class IndexActivity : AppCompatActivity() {
     structureStyle.setMargins(5, 5, 5, 5)
     structure.layoutParams = structureStyle
     structure.orientation = LinearLayout.VERTICAL
-    structure.elevation = 10F
+    structure.elevation = 20F
     when (status) {
       0 -> {
-        structure.setBackgroundResource(R.color.Danger)
+        structure.setBackgroundResource(R.drawable.massage_danger)
       }
       1 -> {
-        structure.setBackgroundResource(R.color.Warning)
+        structure.setBackgroundResource(R.drawable.massage_warning)
       }
       else -> {
-        structure.setBackgroundResource(R.color.Info)
+        structure.setBackgroundResource(R.drawable.massage_info)
       }
+    }
+    structure.setOnClickListener {
+      val goTo = Intent(applicationContext, DetailActivity::class.java)
+      goTo.putExtra("title", titleScript)
+      goTo.putExtra("description", descriptionScript)
+      goTo.putExtra("date", dateScript)
+      startActivity(goTo)
     }
 
     val head = LinearLayout(applicationContext)
@@ -119,13 +126,14 @@ class IndexActivity : AppCompatActivity() {
 
     val logo = ImageView(applicationContext)
     val logoStyle = LinearLayout.LayoutParams(
-      80,
-      150,
+      60,
+      60,
       0.2F
     )
+    logoStyle.setMargins(10, 10, 10, 10)
     logo.layoutParams = logoStyle
     logo.scaleType = ImageView.ScaleType.FIT_XY
-    logo.setImageResource(R.mipmap.ic_launcher_foreground)
+    logo.setImageResource(R.mipmap.ic_launcher_round)
     head.addView(logo)
 
     val title = TextView(applicationContext)
@@ -139,7 +147,7 @@ class IndexActivity : AppCompatActivity() {
     title.textSize = 18F
     title.gravity = Gravity.END
     title.setTypeface(title.typeface, Typeface.BOLD)
-    title.setTextColor(Color.WHITE)
+    title.setTextColor(Color.BLACK)
     title.text = titleScript
     head.addView(title)
 
@@ -153,21 +161,21 @@ class IndexActivity : AppCompatActivity() {
     date.layoutParams = dateStyle
     date.textSize = 12F
     date.gravity = Gravity.END
-    date.setTextColor(Color.WHITE)
+    date.setTextColor(Color.BLACK)
     date.text = dateScript
     head.addView(date)
 
     val body = TextView(applicationContext)
     val bodyStyle = LinearLayout.LayoutParams(
-      LinearLayout.LayoutParams.WRAP_CONTENT,
+      LinearLayout.LayoutParams.MATCH_PARENT,
       LinearLayout.LayoutParams.WRAP_CONTENT,
       1F
     )
-    bodyStyle.setMargins(20, 20, 20, 20)
+    bodyStyle.setMargins(150, 50, 20, 50)
     body.layoutParams = bodyStyle
     body.textSize = 14F
-    body.gravity = Gravity.START
-    body.setTextColor(Color.WHITE)
+    body.gravity = Gravity.END
+    body.setTextColor(Color.BLACK)
     body.text = descriptionScript
 
     structure.addView(head)
